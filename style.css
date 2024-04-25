@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+h1 {
+  font-size: 4rem;
+}
+h1,
+h2,
+button {
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+  line-height: 1.2;
+}
+h3,
+h4,
+h5,
+.message {
+  font-weight: 700;
+}
+h2 {
+  margin-bottom: 5%;
+}
+
+h3 {
+  margin: 5% 10%;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+.subject > h4 {
+  color: hsl(224, 30%, 27%);
+}
+.subject > h4 > span {
+  color: hsl(224, 30%, 27%, 0.5);
+}
+p {
+  font-size: 18px;
+  color: hsl(0, 0%, 100%, 0.8);
+  line-height: 1.2;
+  font-weight: 500;
+}
+.message{
+    font-size: 1.5rem;
+
+}
+@media (min-width: 770px) {
+  .inner-container {
+    max-width: 736px;
+    max-height: 512px;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 10px 10px 25px hsl(241, 100%, 89%,.2);
+
+  }
+  .item.left-side{
+    border-radius: 30px;
+  }
+  .long-message{
+    max-width: 79%;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 770px) {
+  .inner-container {
+    grid-template-columns: 1fr;
+  }
+  .item.left-side{
+    border-radius: 0 0 30px 30px;
+}
+}
+.inner-container {
+  display: grid;
+  grid-template-rows: auto;
+}
+.outer-container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.item.left-side {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  text-align: center;
+  padding: 8.5%;
+}
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  margin: 7.5% auto;
+  border-radius: 50%;
+  width: 37.333vw;
+  height: 37.333vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 140px;
+  min-height: 140px;
+}
+.result > h1 > .score {
+  display: block;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%, 0.5);
+  font-weight: 500;
+}
+.item.right-side {
+  margin: 2% auto;
+  width: 100%;
+  height: 100%;
+
+}
+.nested-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 16px;
+}
+.subject {
+  max-width: 100%;
+  height: 56px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 10px;
+  margin-inline: 10%;
+}
+.subject > .left {
+  display: flex;
+  align-items: center;
+}
+.subject.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%, 0.8);
+}
+.subject.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: hsl(39, 100%, 56%);
+}
+.subject.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+  color: hsl(166, 100%, 37%);
+}
+.subject.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+  color: hsl(234, 85%, 45%);
+}
+
+.subject > div > img {
+  margin-right: 15px;
+}
+button {
+
+  max-width: 100%;
+  height: 56px;
+  border: none;
+  margin: 30px auto;
+  margin-inline: 10%;
+  border-radius: 30px;
+  background-color: hsl(224, 30%, 27%);
+  font-size: 18px;
+}
